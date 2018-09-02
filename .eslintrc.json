@@ -5,6 +5,7 @@
         "node": true
     },
     "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "root": true,
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 6,
@@ -20,16 +21,11 @@
     ],
     "rules": {
         "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
+            2,
+            2,
+            {
+                "SwitchCase": 1
+            }
         ],
         "semi": [
             "error",
@@ -41,6 +37,7 @@
             "argsIgnorePattern": "(^_|^req$|^res$|^next$)"
         }],
         "no-console": 0,
-        "no-constant-condition": 0
+        "no-constant-condition": 0,
+        "no-class-assign": 0
     }
 }
